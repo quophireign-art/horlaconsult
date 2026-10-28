@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<main class="min-h-screen bg-[#f4f2ed] text-[#111]">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3 sm:bottom-8 sm:right-8">
+
+  <!-- Call button (opens the phone dialer / call log) -->
+  <a
+    [href]="telLink"
+    class="fab-call flex items-center gap-3"
+    aria-label="Call Horla Engineering & Design"
+  >
+    <span class="fab-label">Call us</span>
+    <span class="flex h-13 w-13 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:scale-105">
+      <i class="pi pi-phone text-lg"></i>
+    </span>
+  </a>
+
+  <!-- WhatsApp button (opens WhatsApp chat directly) -->
+  <a
+    [href]="whatsappLink"
+    target="_blank"
+    rel="noopener"
+    class="fab-wa flex items-center gap-3"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <span class="fab-label">WhatsApp</span>
+    <span class="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105">
+      <span class="fab-pulse"></span>
+      <i class="pi pi-whatsapp text-2xl"></i>
+    </span>
+  </a>
+
+</div>

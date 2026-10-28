@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+/* PrimeIcons font — provides the glyphs for every `pi pi-*` icon
+   (WhatsApp, phone, arrows, etc.) shown inside the rounded circles. */
+@import "primeicons/primeicons.css";
+
+:root {
+  --brand-gold: #a69c45;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #111;
+  color: #fff;
+}
+
+/* Active nav link underline ---------------------------------------------- */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--brand-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.nav-active::after {
+  width: 100%;
+}
+
+.nav-link.nav-active {
+  color: #000;
+}
+
+/* Hero entrance animations ----------------------------------------------- */
+
+.hero-image {
+  animation: heroZoom 14s ease-out forwards;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+
+.hero-content {
+  animation: heroContent 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroContent {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-card {
+  animation: heroCard 1.3s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroCard {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page-header entrance ---------------------------------------------------- */
+
+.page-hero-content {
+  animation: heroContent 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Scroll-reveal (driven by RevealDirective) ------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card img,
+.reveal-image img {
+  will-change: transform;
+}
+
+/* View transitions (route changes) --------------------------------------- */
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+::view-transition-new(root) {
+  animation: fadeInPage 0.4s ease both;
+}
+
+/* Reduced motion --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

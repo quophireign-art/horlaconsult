@@ -1,0 +1,266 @@
+<!-- HERO -->
+<section class="relative min-h-[760px] overflow-hidden sm:min-h-[850px]">
+
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90"
+      alt="Modern architectural residence"
+      class="hero-image h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 mx-auto flex min-h-[760px] max-w-[1380px] items-end px-6 pb-20 sm:min-h-[850px] sm:px-10 sm:pb-28 lg:px-14">
+    <div class="grid w-full items-end gap-10 lg:grid-cols-[1fr_390px]">
+
+      <!-- LEFT -->
+      <div class="hero-content max-w-4xl text-white">
+        <p class="mb-3 text-xl font-light tracking-wide sm:text-2xl">Crafting</p>
+        <h1 class="max-w-4xl text-5xl font-light leading-[0.95] tracking-[-0.04em] sm:text-7xl lg:text-8xl">
+          Timeless<br />Spaces
+        </h1>
+        <p class="mt-7 max-w-2xl text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
+          Where innovation meets tradition — bespoke architectural and structural
+          engineering solutions for residential and commercial projects.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            routerLink="/contact"
+            class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-black transition hover:bg-white/90"
+          >
+            Get Started <i class="pi pi-arrow-right"></i>
+          </a>
+          <a
+            routerLink="/projects"
+            class="inline-flex items-center gap-2 rounded-full border border-white/60 px-7 py-3 text-white transition hover:bg-white/10"
+          >
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT FLOATING CARD -->
+      <div class="hero-card rounded-[28px] border border-white/10 bg-black/60 p-6 text-white backdrop-blur-md sm:p-8">
+        <span class="text-xs uppercase tracking-[0.25em] text-white/50">Architecture &amp; Engineering</span>
+        <h2 class="mt-4 text-2xl font-medium sm:text-3xl">Elevate Your<br />Environment</h2>
+        <p class="mt-4 text-sm leading-6 text-white/65">
+          Tailored designs that reflect your identity and stand the test of time.
+        </p>
+        <a
+          routerLink="/contact"
+          class="mt-6 flex w-full items-center justify-between rounded-full bg-white px-6 py-3 text-black transition hover:bg-white/90"
+        >
+          Schedule a Consultation <i class="pi pi-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-1/2 z-20 flex h-16 w-[70%] -translate-x-1/2 items-center justify-center rounded-t-[40px] bg-[#f4f2ed] sm:w-[45%]">
+    <div class="flex gap-2">
+      <span class="h-2 w-8 rounded-full bg-black"></span>
+      <span class="h-2 w-2 rounded-full bg-black/30"></span>
+      <span class="h-2 w-2 rounded-full bg-black/30"></span>
+      <span class="h-2 w-2 rounded-full bg-black/30"></span>
+      <span class="h-2 w-2 rounded-full bg-black/30"></span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+  <div class="mx-auto max-w-[1380px]">
+    <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
+
+      <div appReveal class="overflow-hidden rounded-[35px]">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+          alt="Architecture project"
+          class="h-[500px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[650px]"
+        />
+      </div>
+
+      <div appReveal [revealDelay]="120">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-black/40">01 / About us</p>
+        <h2 class="mt-6 max-w-xl text-4xl font-light leading-tight tracking-[-0.03em] sm:text-6xl">
+          Architecture<br />with purpose.
+        </h2>
+        <p class="mt-8 max-w-xl text-base leading-8 text-black/60">
+          We believe architecture should do more than occupy space. It should
+          create experiences, inspire people and respond intelligently to its surroundings.
+        </p>
+        <p class="mt-5 max-w-xl text-base leading-8 text-black/60">
+          Our studio combines contemporary design with local materials, cultural
+          context and sustainable engineering to create spaces that remain relevant for generations.
+        </p>
+
+        <div class="mt-10 grid grid-cols-2 gap-6 border-t border-black/10 pt-8 sm:grid-cols-3">
+          <div>
+            <p class="text-3xl font-medium">12+</p>
+            <p class="mt-1 text-xs uppercase tracking-wider text-black/40">Years</p>
+          </div>
+          <div>
+            <p class="text-3xl font-medium">85+</p>
+            <p class="mt-1 text-xs uppercase tracking-wider text-black/40">Projects</p>
+          </div>
+          <div>
+            <p class="text-3xl font-medium">18</p>
+            <p class="mt-1 text-xs uppercase tracking-wider text-black/40">Awards</p>
+          </div>
+        </div>
+
+        <a routerLink="/about" class="mt-10 inline-flex items-center gap-3 font-medium">
+          More about us
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">
+            <i class="pi pi-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="bg-[#171717] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32">
+  <div class="mx-auto max-w-[1380px]">
+    <div appReveal class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+      <div>
+        <p class="text-xs uppercase tracking-[0.3em] text-white/40">02 / Services</p>
+        <h2 class="mt-5 max-w-2xl text-4xl font-light tracking-[-0.03em] sm:text-6xl">
+          We design spaces<br />that matter.
+        </h2>
+      </div>
+      <p class="max-w-md text-sm leading-7 text-white/50">
+        From initial concept to final construction, we provide a complete design
+        and engineering experience.
+      </p>
+    </div>
+
+    <div class="mt-16 grid border-t border-white/10 md:grid-cols-3">
+      @for (service of services; track service.number; let i = $index) {
+        <article
+          appReveal
+          [revealDelay]="i * 120"
+          class="group border-b border-white/10 p-7 transition duration-500 hover:bg-white/5 md:border-b-0 md:border-r md:last:border-r-0 lg:p-10"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-white/30">{{ service.number }}</span>
+            <i class="pi {{ service.icon }} text-xl text-white/50 transition duration-300 group-hover:rotate-12 group-hover:text-white"></i>
+          </div>
+          <h3 class="mt-20 text-2xl font-light">{{ service.title }}</h3>
+          <p class="mt-5 text-sm leading-7 text-white/45">{{ service.description }}</p>
+          <a routerLink="/services" class="mt-8 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition group-hover:bg-white group-hover:text-black">
+            <i class="pi pi-arrow-up-right"></i>
+          </a>
+        </article>
+      }
+    </div>
+
+    <div class="mt-12">
+      <a routerLink="/services" class="inline-flex items-center gap-3 text-sm font-medium text-white">
+        Explore all services
+        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30">
+          <i class="pi pi-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS PREVIEW -->
+<section class="px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+  <div class="mx-auto max-w-[1380px]">
+    <div appReveal class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+      <div>
+        <p class="text-xs uppercase tracking-[0.3em] text-black/40">03 / Selected projects</p>
+        <h2 class="mt-5 text-4xl font-light tracking-[-0.03em] sm:text-6xl">Spaces we've created.</h2>
+      </div>
+      <a routerLink="/projects" class="flex items-center gap-3 text-sm font-medium">
+        View all projects
+        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-black/20">
+          <i class="pi pi-arrow-up-right"></i>
+        </span>
+      </a>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-2">
+      @for (project of projects; track project.title; let i = $index) {
+        <article
+          appReveal
+          [revealDelay]="(i % 2) * 120"
+          class="project-card group relative overflow-hidden rounded-[30px]"
+          [class.md:mt-20]="i % 2 === 1"
+        >
+          <img
+            [src]="project.image"
+            [alt]="project.title"
+            class="h-[430px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[550px]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white sm:p-8">
+            <div class="flex items-end justify-between gap-5">
+              <div>
+                <p class="text-xs uppercase tracking-[0.2em] text-white/50">{{ project.category }}</p>
+                <h3 class="mt-2 text-2xl font-light sm:text-3xl">{{ project.title }}</h3>
+                <p class="mt-1 text-sm text-white/50">{{ project.location }}</p>
+              </div>
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-black">
+                <i class="pi pi-arrow-up-right"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-[#f4f2ed] px-6 py-24 sm:px-10 lg:px-16 lg:py-36">
+  <div class="mx-auto max-w-[1100px] text-center">
+    <p class="text-xs uppercase tracking-[0.3em] text-black/40">05 / Testimonials</p>
+    <h2 class="mt-5 text-4xl font-light tracking-[-0.03em] sm:text-6xl">Words from our clients.</h2>
+
+    <div class="mt-16 grid gap-5 md:grid-cols-3">
+      @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+        <div appReveal [revealDelay]="i * 120">
+          <p-card styleClass="!h-full !rounded-[28px] !border !border-black/10 !bg-white !shadow-none">
+            <div class="p-2 text-left">
+              <div class="mb-8 flex gap-1 text-[#A69C45]">
+                @for (star of [1,2,3,4,5]; track star) {
+                  <i class="pi pi-star-fill text-xs"></i>
+                }
+              </div>
+              <p class="text-lg font-light leading-8">“{{ testimonial.quote }}”</p>
+              <div class="mt-8 border-t border-black/10 pt-5">
+                <p class="text-sm font-semibold">{{ testimonial.name }}</p>
+                <p class="mt-1 text-xs text-black/40">{{ testimonial.role }}</p>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="bg-black px-6 py-20 text-white sm:px-10 lg:px-16 lg:py-28">
+  <div appReveal class="mx-auto flex max-w-[1380px] flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+    <h2 class="max-w-2xl text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+      Let's build something<br />extraordinary together.
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      <a routerLink="/contact" class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-black transition hover:bg-white/90">
+        Start a project <i class="pi pi-arrow-right"></i>
+      </a>
+      <a [href]="whatsappLink" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-white transition hover:bg-[#20bd5a]">
+        <i class="pi pi-whatsapp"></i> WhatsApp us
+      </a>
+    </div>
+  </div>
+</section>

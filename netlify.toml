@@ -1,0 +1,19 @@
+# Netlify build & hosting configuration for Horla Engineering & Design
+
+[build]
+  # Install dependencies and build the production bundle.
+  command = "npm run build"
+  # Angular 22 (@angular/build) outputs the browser bundle here.
+  publish = "dist/horlaconsult/browser"
+
+[build.environment]
+  # Angular 22 requires Node 20+ (Node 22 recommended).
+  NODE_VERSION = "22"
+
+# SPA fallback: let the Angular router handle client-side routes so that
+# direct visits / refreshes on deep links (/services, /projects, /about,
+# /contact) return index.html instead of a 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

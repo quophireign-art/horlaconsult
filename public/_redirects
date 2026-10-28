@@ -1,0 +1,3 @@
+# Netlify SPA fallback — serve index.html for every route so the Angular
+# router can handle deep links (e.g. /services, /projects) without 404s.
+/*    /index.html   200

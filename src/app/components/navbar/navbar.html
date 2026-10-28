@@ -1,0 +1,100 @@
+<header class="fixed left-0 top-0 z-50 w-full px-4 pt-4 sm:px-6 lg:px-10">
+
+  <nav
+    class="mx-auto flex max-w-[1380px] items-center justify-between
+           rounded-[30px] px-5 py-3 shadow-xl backdrop-blur-md
+           transition-all duration-500 lg:px-7"
+    [ngClass]="scrolled() ? 'bg-white' : 'bg-white/95'"
+  >
+
+    <!-- LOGO -->
+    <a routerLink="/" class="flex items-center gap-3" (click)="closeMenu()">
+
+      <img
+        src="logo.png"
+        alt="Horla Engineering & Design logo"
+        class="h-11 w-11 rounded-full bg-black object-contain p-1"
+      />
+
+      <div class="flex flex-col leading-none">
+        <span class="font-serif text-2xl font-light tracking-[-0.08em]">
+          HORLA
+        </span>
+        <span class="-mt-0.5 text-[8px] font-semibold tracking-[0.28em] text-black/60">
+          ENGINEERING &amp; DESIGN
+        </span>
+      </div>
+
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <div class="hidden items-center gap-8 lg:flex">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="nav-active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+          class="nav-link text-sm font-medium transition hover:text-black/50"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </div>
+
+    <!-- DESKTOP CTA -->
+    <div class="hidden lg:block">
+      <a
+        [href]="whatsappLink"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3
+               text-sm font-medium text-white transition hover:bg-black/80"
+      >
+        <i class="pi pi-whatsapp"></i>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- MOBILE BUTTON -->
+    <button
+      class="flex h-11 w-11 items-center justify-center rounded-full
+             bg-black text-white lg:hidden"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle navigation"
+    >
+      <i class="pi" [class.pi-bars]="!mobileMenuOpen()" [class.pi-times]="mobileMenuOpen()"></i>
+    </button>
+
+  </nav>
+
+  <!-- MOBILE NAV -->
+  @if (mobileMenuOpen()) {
+    <div class="mx-auto mt-3 max-w-[1380px] rounded-[25px] bg-white p-5 shadow-xl lg:hidden">
+      <div class="flex flex-col gap-1">
+        @for (link of links; track link.path) {
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="bg-black/5 font-semibold"
+            [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+            class="rounded-xl px-4 py-3 text-left transition hover:bg-black/5"
+            (click)="closeMenu()"
+          >
+            {{ link.label }}
+          </a>
+        }
+        <a
+          [href]="whatsappLink"
+          target="_blank"
+          rel="noopener"
+          class="mt-2 flex items-center justify-center gap-2 rounded-full
+                 bg-[#25D366] px-4 py-3 font-medium text-white"
+          (click)="closeMenu()"
+        >
+          <i class="pi pi-whatsapp"></i>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  }
+
+</header>
